@@ -1,0 +1,30 @@
+library ieee;
+
+use ieee.std_logic_1164.all;
+
+use ieee.std_logic_unsigned.all;
+
+entity Counter4Bit is
+		Port ( rst,clk : in std_logic;
+				sec0_2: out std_logic);
+end Counter4Bit;
+
+architecture count_arch of Counter4Bit is
+	signal count : std_logic_vector(3 downto 0);
+	signal o : std_logic;
+begin
+	process(rst,clk)
+	begin
+		if (rst = '0') then
+			count <= "0000";
+			o <= '0';
+		elsif (clk'event and clk = '1' and count="1000") then --1001
+			count <= "0000";
+			o <= '1';
+		elsif (clk'event and clk = '1') then
+			count <= count + '1';
+			o <= '0';
+		end if;
+	end process;
+	sec0_2 <= o;
+end count_arch;

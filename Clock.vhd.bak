@@ -1,0 +1,30 @@
+library ieee;
+
+use ieee.std_logic_1164.all;
+
+use ieee.std_logic_unsigned.all;
+
+entity Clock is
+		Port (SW: in std_logic_vector(7 downto 0);	-- INPUT SWITCHES
+				KEY : in std_logic_vector (3 downto 0);-- INPUT BUTTONS
+				CLOCK_50: in std_logic; 					-- FPGA BOARD INTERNAL 50MHz CLOCK
+				HEX0, HEX1, HEX2, HEX3, HEX4, HEX5: out std_logic_vector(6 downto 0));-- ALL OF THE HEX DISPLAYS
+end Clock;
+
+architecture design of Clock is
+--	signal count : std_logic_vector(19 downto 0);
+--	signal o : std_logic;
+
+
+
+begin
+	
+	process(rst,clk)
+	
+	begin
+
+	
+	end process;
+
+	
+end design;

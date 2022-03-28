@@ -1,0 +1,55 @@
+library ieee;
+
+use ieee.std_logic_1164.all;
+
+use ieee.std_logic_unsigned.all;
+
+entity Compare is
+		Port (Cin: in std_logic_vector(3 downto 0);
+				bound: in std_logic_vector(3 downto 0);
+				Cout: out std_logic_vector(3 downto 0));
+end Compare;
+
+architecture design of Counter4Bit is
+	
+begin
+	process(Cin)
+	begin
+		
+		case Cin is
+		-- For 0
+		when "0000" =>
+			Cout <= "0000";
+		-- For 1
+		when "0001" =>
+			Cout <= "0001";
+		-- For 2
+		when "0010" =>
+			Cout <= "0010";
+		-- For 3
+		when "0011" =>
+			Cout <= "0011";
+		-- For 4
+		when "0100" =>
+			Cout <= "0100";
+		-- For 5
+		when "0101" =>
+			Cout <= "0101";
+		-- For 6
+		when "0110" =>
+			HEX <= "0110";
+		-- For 7
+		when "0111" =>
+			Cout <= "0111";
+		-- For 8
+		when "1000" =>
+			Cout <= "1000";
+		-- For 9
+		when "1001" =>
+			Cout <= "1001";
+		when others =>
+			Cout <= "0000";
+		end case;
+	end process;
+	
+end design;
