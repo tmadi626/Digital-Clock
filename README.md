@@ -1,7 +1,3 @@
-# Digital-Clock
-A Digital Clock is created through the use of VHDL, and was tested, as well as implemented in DE1-SoC FPGA
-
-
 <h1 align="center">Digital Clock</h1>
 
 <div align="center">
@@ -29,7 +25,7 @@ If you ever wondered how do digital (24HR) clocks work, or simply want to make o
 ## 🤔 About <a name = "about"></a>
 
 The Digital Clock was created in an effort to learn Digital Systems via applications, as well as to incorperate counters and combinational circuits to create a large intricate system.
-It is implemented on DE1-SoC, and it uses its internal 50MHz clock, as well as the 6 HEX displays, and the input buttons for resetting and setting hours/minutes by the input swithces.
+It is implemented on DE1-SoC FPGA, and it uses its internal 50MHz clock, as well as the 6 HEX displays, and the input buttons for resetting and setting hours/minutes by the input swithces.
 ## 🧐 Files <a name = "files"></a>
 
 <ul>
